@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7118F71BD421E400F91D2C /* PenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7118F61BD421E400F91D2C /* PenViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FEF5F891BD1419B00E1856A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF5F881BD1419B00E1856A /* AppDelegate.swift */; };
-		3FEF5F8B1BD1419B00E1856A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8A1BD1419B00E1856A /* ViewController.swift */; };
+		3FEF5F8B1BD1419B00E1856A /* ZooCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */; };
 		3FEF5F8E1BD1419B00E1856A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8C1BD1419B00E1856A /* Main.storyboard */; };
 		3FEF5F901BD1419B00E1856A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8F1BD1419B00E1856A /* Assets.xcassets */; };
 		3FEF5F931BD1419B00E1856A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF5F911BD1419B00E1856A /* LaunchScreen.storyboard */; };
@@ -37,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F7118F61BD421E400F91D2C /* PenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenViewController.swift; sourceTree = "<group>"; };
 		3FEF5F851BD1419B00E1856A /* ZooV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEF5F881BD1419B00E1856A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FEF5F8A1BD1419B00E1856A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCreationViewController.swift; sourceTree = "<group>"; };
 		3FEF5F8D1BD1419B00E1856A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FEF5F8F1BD1419B00E1856A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FEF5F921BD1419B00E1856A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,7 +147,8 @@
 		3FEF5FB71BD141BE00E1856A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FEF5F8A1BD1419B00E1856A /* ViewController.swift */,
+				3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */,
+				3F7118F61BD421E400F91D2C /* PenViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,8 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FEF5F8B1BD1419B00E1856A /* ViewController.swift in Sources */,
+				3FEF5F8B1BD1419B00E1856A /* ZooCreationViewController.swift in Sources */,
 				3FEF5F891BD1419B00E1856A /* AppDelegate.swift in Sources */,
+				3F7118F71BD421E400F91D2C /* PenViewController.swift in Sources */,
 				3FEF5FB91BD141EF00E1856A /* Animals.swift in Sources */,
 				3FEF5FBF1BD1429600E1856A /* Pens.swift in Sources */,
 				3FEF5FBD1BD1427F00E1856A /* Zoo.swift in Sources */,
@@ -511,6 +515,7 @@
 				3FEF5FAF1BD1419C00E1856A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FEF5FB01BD1419C00E1856A /* Build configuration list for PBXNativeTarget "ZooV2Tests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +524,7 @@
 				3FEF5FB21BD1419C00E1856A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FEF5FB31BD1419C00E1856A /* Build configuration list for PBXNativeTarget "ZooV2UITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +533,7 @@
 				3FEF5FB51BD1419C00E1856A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

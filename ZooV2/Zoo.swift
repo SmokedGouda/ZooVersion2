@@ -13,7 +13,7 @@ class Zoo {
     var name:String
     var zooKeeper:String
     var animalPens = [Pen]()
-    init(name: String, zooKeeper:String){
+    init(name: String, zooKeeper: String){
         self.name = name
         self.zooKeeper = zooKeeper
     }

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Zoo Creation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZooV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Zoo Creation" id="BYZ-38-t0r" customClass="ZooCreationViewController" customModule="ZooV2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,186 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to the Zoo Maker.  Get started by naming your Zoo and hiring a zoo keeper." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syq-wN-8FR">
+                                <rect key="frame" x="20" y="90" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Give your zoo a name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AxZ-aa-831">
+                                <rect key="frame" x="20" y="245" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="966-Ns-iI1"/>
+                                    <constraint firstAttribute="width" constant="403" id="QbX-dg-hFd"/>
+                                    <constraint firstAttribute="height" constant="30" id="fFL-S9-so9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="966-Ns-iI1"/>
+                                        <exclude reference="QbX-dg-hFd"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-mU-o6H">
+                                <rect key="frame" x="243" y="387" width="114" height="30"/>
+                                <state key="normal" title="Create your zoo!"/>
+                                <connections>
+                                    <action selector="createZooButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApM-HM-fhh"/>
+                                    <segue destination="cgu-ah-BBh" kind="show" identifier="PenSegue" id="otw-7O-7hf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Give your zoo keeper a name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Van-Bz-bek">
+                                <rect key="frame" x="20" y="305" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="403" id="Lmz-Sl-fJv"/>
+                                    <constraint firstAttribute="height" constant="30" id="efK-vj-yAE"/>
+                                    <constraint firstAttribute="height" constant="30" id="xj9-wP-1mX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lmz-Sl-fJv"/>
+                                        <exclude reference="xj9-wP-1mX"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Van-Bz-bek" firstAttribute="top" secondItem="AxZ-aa-831" secondAttribute="bottom" constant="28" id="2xN-la-YKS"/>
+                            <constraint firstItem="FCd-mU-o6H" firstAttribute="top" secondItem="Van-Bz-bek" secondAttribute="bottom" constant="52" id="75Z-6A-nBF"/>
+                            <constraint firstItem="Van-Bz-bek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7IZ-Dk-tWP"/>
+                            <constraint firstItem="Syq-wN-8FR" firstAttribute="leading" secondItem="AxZ-aa-831" secondAttribute="leading" id="CeF-9S-Kzk"/>
+                            <constraint firstAttribute="trailing" secondItem="AxZ-aa-831" secondAttribute="trailing" constant="20" id="DK5-Pr-hPt"/>
+                            <constraint firstAttribute="trailing" secondItem="AxZ-aa-831" secondAttribute="trailing" constant="20" id="GdT-GP-JcW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FCd-mU-o6H" secondAttribute="bottom" constant="183" id="JbG-el-9b6"/>
+                            <constraint firstItem="AxZ-aa-831" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MO7-q7-XGk"/>
+                            <constraint firstItem="Syq-wN-8FR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OqQ-1b-wiG"/>
+                            <constraint firstAttribute="trailing" secondItem="Syq-wN-8FR" secondAttribute="trailing" constant="20" id="PU6-7g-zUR"/>
+                            <constraint firstItem="AxZ-aa-831" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TVU-ie-wFh"/>
+                            <constraint firstItem="FCd-mU-o6H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WZ4-PU-7yL"/>
+                            <constraint firstItem="Syq-wN-8FR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="YZk-M3-dwO"/>
+                            <constraint firstAttribute="trailing" secondItem="Van-Bz-bek" secondAttribute="trailing" constant="20" id="grY-ul-NlW"/>
+                            <constraint firstItem="Van-Bz-bek" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="htr-jp-ybh"/>
+                            <constraint firstItem="Syq-wN-8FR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lv0-dh-y7g"/>
+                            <constraint firstAttribute="trailing" secondItem="Van-Bz-bek" secondAttribute="trailing" constant="20" id="nuy-OA-d0K"/>
+                            <constraint firstItem="Van-Bz-bek" firstAttribute="top" secondItem="AxZ-aa-831" secondAttribute="bottom" constant="30" id="wgn-TY-VcU"/>
+                            <constraint firstItem="FCd-mU-o6H" firstAttribute="top" secondItem="Van-Bz-bek" secondAttribute="bottom" constant="52" id="xHS-ct-D7D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CeF-9S-Kzk"/>
+                                <exclude reference="DK5-Pr-hPt"/>
+                                <exclude reference="2xN-la-YKS"/>
+                                <exclude reference="nuy-OA-d0K"/>
+                                <exclude reference="75Z-6A-nBF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="ZE8-a9-NUx"/>
+                    <connections>
+                        <outlet property="zooKeeperNameTextField" destination="Van-Bz-bek" id="VjS-f2-bVt"/>
+                        <outlet property="zooNameTextField" destination="AxZ-aa-831" id="VDp-uR-OIM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="161"/>
+        </scene>
+        <!--Pen View Controller-->
+        <scene sceneID="TN7-Sj-r7D">
+            <objects>
+                <viewController id="cgu-ah-BBh" customClass="PenViewController" customModule="ZooV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W1c-ZD-0UA"/>
+                        <viewControllerLayoutGuide type="bottom" id="DPY-a1-R49"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aer-Ex-ujw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;ZooName&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-VQ-wq1">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VmO-ka-Ovg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoo Keeper Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaH-dB-JMY">
+                                <rect key="frame" x="229" y="57" width="142.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;ZooKeeperName&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-hT-Wn2">
+                                <rect key="frame" x="20" y="85.5" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xIs-9P-tfY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6C8-g6-Ffy">
+                                <rect key="frame" x="223" y="114.5" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PT4-j0-ugK"/>
+                                    <constraint firstAttribute="width" constant="155" id="RMj-EP-2uG"/>
+                                </constraints>
+                                <state key="normal" title="Add a pen to your zoo"/>
+                                <connections>
+                                    <action selector="addPenToZooButton:" destination="cgu-ah-BBh" eventType="touchUpInside" id="Khv-uo-r1N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n5a-hT-Wn2" firstAttribute="top" secondItem="QaH-dB-JMY" secondAttribute="bottom" constant="8" id="1pC-Tn-GTL"/>
+                            <constraint firstItem="KXS-VQ-wq1" firstAttribute="top" secondItem="W1c-ZD-0UA" secondAttribute="bottom" constant="8" id="2jY-o3-jRh"/>
+                            <constraint firstAttribute="trailing" secondItem="KXS-VQ-wq1" secondAttribute="trailing" constant="20" id="5XS-I1-eKt"/>
+                            <constraint firstItem="6C8-g6-Ffy" firstAttribute="top" secondItem="n5a-hT-Wn2" secondAttribute="bottom" constant="8" id="H3W-Da-Piu"/>
+                            <constraint firstItem="n5a-hT-Wn2" firstAttribute="leading" secondItem="Aer-Ex-ujw" secondAttribute="leading" constant="20" id="cnh-BA-eSR"/>
+                            <constraint firstAttribute="trailing" secondItem="n5a-hT-Wn2" secondAttribute="trailing" constant="20" id="fLO-zD-4UR"/>
+                            <constraint firstItem="QaH-dB-JMY" firstAttribute="top" secondItem="KXS-VQ-wq1" secondAttribute="bottom" constant="8" id="gDo-Ho-2t5"/>
+                            <constraint firstItem="6C8-g6-Ffy" firstAttribute="centerX" secondItem="Aer-Ex-ujw" secondAttribute="centerX" id="rlo-m4-kZ4"/>
+                            <constraint firstItem="KXS-VQ-wq1" firstAttribute="leading" secondItem="Aer-Ex-ujw" secondAttribute="leading" constant="20" id="vLa-7R-j9z"/>
+                            <constraint firstItem="QaH-dB-JMY" firstAttribute="centerX" secondItem="Aer-Ex-ujw" secondAttribute="centerX" id="xBf-aG-Kjf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="32a-pc-CbE"/>
+                    <connections>
+                        <outlet property="zooKeeperNameLabel" destination="n5a-hT-Wn2" id="qd4-L0-lIv"/>
+                        <outlet property="zooNameLabel" destination="KXS-VQ-wq1" id="F9z-PH-l4y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIp-cF-erF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="868"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tzD-3l-jOZ">
+            <objects>
+                <navigationController id="Poj-ec-LRv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vMD-BQ-SCd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cgu-ah-BBh" kind="relationship" relationship="rootViewController" id="uOL-3U-1u0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVV-pl-lJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="868"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="otw-7O-7hf"/>
+    </inferredMetricsTieBreakers>
 </document>
