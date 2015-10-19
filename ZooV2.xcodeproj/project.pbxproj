@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F7118F71BD421E400F91D2C /* PenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7118F61BD421E400F91D2C /* PenViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F7118F91BD42CB000F91D2C /* AddPenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FEF5F891BD1419B00E1856A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF5F881BD1419B00E1856A /* AppDelegate.swift */; };
 		3FEF5F8B1BD1419B00E1856A /* ZooCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */; };
 		3FEF5F8E1BD1419B00E1856A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF5F8C1BD1419B00E1856A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		3F7118F61BD421E400F91D2C /* PenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenViewController.swift; sourceTree = "<group>"; };
+		3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPenViewController.swift; sourceTree = "<group>"; };
 		3FEF5F851BD1419B00E1856A /* ZooV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEF5F881BD1419B00E1856A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCreationViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +107,10 @@
 		3FEF5F871BD1419B00E1856A /* ZooV2 */ = {
 			isa = PBXGroup;
 			children = (
+				3FEF5F8C1BD1419B00E1856A /* Main.storyboard */,
 				3FEF5FB71BD141BE00E1856A /* Controllers */,
 				3FEF5FB61BD141AD00E1856A /* Models */,
 				3FEF5F881BD1419B00E1856A /* AppDelegate.swift */,
-				3FEF5F8C1BD1419B00E1856A /* Main.storyboard */,
 				3FEF5F8F1BD1419B00E1856A /* Assets.xcassets */,
 				3FEF5F911BD1419B00E1856A /* LaunchScreen.storyboard */,
 				3FEF5F941BD1419B00E1856A /* Info.plist */,
@@ -149,6 +151,7 @@
 			children = (
 				3FEF5F8A1BD1419B00E1856A /* ZooCreationViewController.swift */,
 				3F7118F61BD421E400F91D2C /* PenViewController.swift */,
+				3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				3FEF5F8B1BD1419B00E1856A /* ZooCreationViewController.swift in Sources */,
 				3FEF5F891BD1419B00E1856A /* AppDelegate.swift in Sources */,
 				3F7118F71BD421E400F91D2C /* PenViewController.swift in Sources */,
+				3F7118F91BD42CB000F91D2C /* AddPenViewController.swift in Sources */,
 				3FEF5FB91BD141EF00E1856A /* Animals.swift in Sources */,
 				3FEF5FBF1BD1429600E1856A /* Pens.swift in Sources */,
 				3FEF5FBD1BD1427F00E1856A /* Zoo.swift in Sources */,
