@@ -9,18 +9,19 @@
 import UIKit
 
 class PenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var zooNameLabel: UILabel!
+
     @IBOutlet weak var zooKeeperNameLabel: UILabel!
     @IBOutlet weak var penTableView: UITableView!
     
     var zooNameLabelText = String()
     var zooKeeperNameLabelText = String()
     var zoo = Zoo(name: "name", zooKeeper: "name")
+    var penIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        zooNameLabel.text = zooNameLabelText
+        navigationItem.hidesBackButton = true
+        navigationItem.title = zooNameLabelText
         zooKeeperNameLabel.text = zooKeeperNameLabelText
         zoo = Zoo(name: zooNameLabelText, zooKeeper: zooKeeperNameLabelText)
         print("\(zoo.name) managed by \(zoo.zooKeeper)")
@@ -37,7 +38,11 @@ class PenViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "AddPenSegue" {
-        let destVC: AddPenViewController = segue.destinationViewController as! AddPenViewController
+            let destVC: AddPenViewController = segue.destinationViewController as! AddPenViewController
+        } else {
+            let destVC: AnimalTableViewController = segue.destinationViewController as! AnimalTableViewController
+            let penNameTouched = zoo.animalPens[penIndex]
+            destVC.penListName = penNameTouched.name
         }
     }
     
@@ -59,7 +64,7 @@ class PenViewController: UIViewController, UITableViewDataSource, UITableViewDel
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "penCell")
         }
         let zooPens = zoo.animalPens[indexPath.row]
-        cell.textLabel?.text = zooPens.name
+        cell.textLabel?.text = "\(zooPens.name) pen"
         return cell
     }
 }
