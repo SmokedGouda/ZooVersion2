@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1211561BD48BAB002869EF /* AddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1211551BD48BAB002869EF /* AddAnimalViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F17134C1BD4721200880560 /* AnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17134B1BD4721200880560 /* AnimalTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F7118F71BD421E400F91D2C /* PenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7118F61BD421E400F91D2C /* PenViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F7118F91BD42CB000F91D2C /* AddPenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1211551BD48BAB002869EF /* AddAnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalViewController.swift; sourceTree = "<group>"; };
 		3F17134B1BD4721200880560 /* AnimalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalTableViewController.swift; sourceTree = "<group>"; };
 		3F7118F61BD421E400F91D2C /* PenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenViewController.swift; sourceTree = "<group>"; };
 		3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPenViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				3F7118F61BD421E400F91D2C /* PenViewController.swift */,
 				3F17134B1BD4721200880560 /* AnimalTableViewController.swift */,
 				3F7118F81BD42CB000F91D2C /* AddPenViewController.swift */,
+				3F1211551BD48BAB002869EF /* AddAnimalViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				3FEF5FB91BD141EF00E1856A /* Animals.swift in Sources */,
 				3FEF5FBF1BD1429600E1856A /* Pens.swift in Sources */,
 				3FEF5FBD1BD1427F00E1856A /* Zoo.swift in Sources */,
+				3F1211561BD48BAB002869EF /* AddAnimalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

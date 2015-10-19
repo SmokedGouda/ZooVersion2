@@ -36,11 +36,16 @@ class PenViewController: UIViewController, UITableViewDataSource, UITableViewDel
         penTableView.reloadData()
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        penIndex = indexPath.row
+        
+    }
+    
+  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "AddPenSegue" {
-            let destVC: AddPenViewController = segue.destinationViewController as! AddPenViewController
-        } else {
+        if segue.identifier == "animalTableSegue" {
             let destVC: AnimalTableViewController = segue.destinationViewController as! AnimalTableViewController
+            print(penIndex)
             let penNameTouched = zoo.animalPens[penIndex]
             destVC.penListName = penNameTouched.name
         }

@@ -13,6 +13,7 @@ class AnimalTableViewController: UITableViewController {
     var penListName = String()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
         navigationItem.title = "\(penListName) pen"
 
         // Uncomment the following line to preserve selection between presentations
